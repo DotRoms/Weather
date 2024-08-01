@@ -8,9 +8,7 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+        backgroundImage: "url('https://cdn.pixabay.com/photo/2022/08/10/18/57/lake-7377942_1280.jpg')",
       },
     },
   },
