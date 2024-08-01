@@ -3,7 +3,7 @@ export default function Location({ location }) {
   const newTime = time.split(" ")[1];
 
   return (
-    <div className="flex flex-col w-full  p-10 border-2 rounded-3xl border-white shadow-xl bg-yellow-200 bg-opacity-40 gap-4">
+    <div className="flex flex-col w-full  p-10 border-2 rounded-3xl border-blue-400 shadow-xl bg-yellow-200 bg-opacity-40 gap-4">
       <h1 className="font-bold text-2xl md:text-3xl text-center">
         Actually in {location.location.name}
       </h1>

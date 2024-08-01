@@ -2,7 +2,7 @@
 import Image from "next/image"
 export default function GeneralInformations({ location }) {
   return (
-    <div className="flex flex-col w-full p-10 border-2 rounded-3xl border-white shadow-xl bg-yellow-200 bg-opacity-40 gap-4">
+    <div className="flex flex-col w-full p-10 border-2 rounded-3xl border-blue-400 shadow-xl bg-yellow-200 bg-opacity-40 gap-4">
     <p className="text-2xl md:text-3xl text-center">
       Temperature: <span className="font-bold">{location.current.temp_c}°C</span>
     </p>
