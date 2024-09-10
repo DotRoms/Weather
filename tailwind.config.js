@@ -7,9 +7,6 @@ module.exports = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        backgroundImage: "url('https://cdn.pixabay.com/photo/2022/08/10/18/57/lake-7377942_1280.jpg')",
-      },
     },
   },
   plugins: [],

@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 
 export async function POST(req) {
-  // console.log(req.query);
+  console.log(req.query);
   const { location } = await req.json();
 
   if (!location) {
