@@ -1,10 +1,8 @@
-import Header from '../app/src/components/Header';
-import Weather from '../app/src/components/Weather';
+import Content from "./src/components/Main/Content";
 export default function Home() {
   return (
-    <main >
-      <Header></Header>
-      <Weather></Weather>
-    </main>
+    <>
+      <Content />
+    </>
   );
 }
