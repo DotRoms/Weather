@@ -2,7 +2,10 @@
 import { getLocalTime } from "@/utils/getLocalTime";
 import { useState } from "react";
 import handleSubmit from "../../../../utils/fetchingWeather/fetchingWeatherLocation";
-import CurrentCards from "./Cards/CurrentCards";
+import AtmosphereCard from "./Cards/Atmosphere/AtmosphereCard";
+import CurrentCard from "./Cards/Current/CurrentCard";
+import ForecastCards from "./Cards/Forecast/ForecastCard";
+import WindsCard from "./Cards/Winds/WindsCard";
 import ContentPresentation from "./Content-Presentation";
 import FormSearch from "./FormSearch";
 export default function Content() {
@@ -19,6 +22,8 @@ export default function Content() {
   const timeZone =
     weatherData && weatherData.location ? weatherData.location.localtime : null;
   const localTime = timeZone ? getLocalTime(timeZone) : "N/A";
+
+  // console.log(weatherData.current);
   return (
     <>
       <FormSearch
@@ -30,11 +35,17 @@ export default function Content() {
       {error && <p style={{ color: "red" }}>{error}</p>}
 
       {weatherData && (
-        <div className="flex flex-col gap-20 p-4">
+        <div className="flex flex-col gap-10 p-4">
 
         <ContentPresentation localTime={localTime} weatherData={weatherData} />
-        <div className="flex justify-around gap-4">
-          <CurrentCards current={weatherData.current} />
+        <div className="flex flex-col sm:flex-row justify-around gap-4">
+          <CurrentCard current={weatherData.current} />
+          <WindsCard current={weatherData.current}/>
+          <AtmosphereCard current={weatherData.current}/>
+        </div>
+        <div>
+
+          <ForecastCards forecast={weatherData.forecast} location={weatherData.location} />
         </div>
 
         </div>

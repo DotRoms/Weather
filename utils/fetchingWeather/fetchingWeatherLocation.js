@@ -15,7 +15,6 @@ const handleSubmit = async (location, setError, setWeatherData) => {
     }
 
     const data = await response.json();
-    console.log(data);
     setWeatherData(data);
     setError(null);  // Clear any previous errors
   } catch (error) {

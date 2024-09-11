@@ -1,7 +1,7 @@
 import { FaSearchLocation } from 'react-icons/fa';
 export default function HeaderSearch({location, setLocation, onSubmit}) {
   return (
-    <form onSubmit={onSubmit} className='flex m-auto w-full sm:w-[70%] gap-5 mb-10 px-4'>
+    <form onSubmit={onSubmit} className='flex m-auto w-full sm:w-[70%] gap-5 mb-10 px-6'>
     <input
       type="text"
       placeholder="Entrer une ville"
@@ -10,7 +10,7 @@ export default function HeaderSearch({location, setLocation, onSubmit}) {
       className='
       w-full rounded-xl border-2 border-white shadow-xl text-center'
     />
-    <button type="submit"><FaSearchLocation className="text-white" size={40}/>
+    <button type="submit"><FaSearchLocation className="text-white" size={30}/>
     </button>
   </form>
   )
